@@ -38,11 +38,11 @@ class App extends React.Component {
         <br/>
         <div className="jumbotron container-fluid">
         <form>
-        <div class="form-row justify-content-center">
-          <div class="col-3">
-          <input type="text" class="form-control" placeholder="Enter your github username" onChange={this.ChangeUsername}/>
+        <div className="form-row justify-content-center">
+          <div className="col-md-3">
+          <input type="text" className="form-control" placeholder="Enter your github username" onChange={this.ChangeUsername}/>
           </div>
-          <div class="col-2 ">
+          <div className="col-md-2">
           <button className='form-control' onClick={this.getUsername}> Generate </button>
           </div>
          </div>
@@ -70,7 +70,7 @@ const Timeline = ({ repo , username }) => {
     <div>
       <p> Timeline for {username} </p>
      
-        <table className="table">
+        <table className="table table-responsive">
         <thead>
         <tr>
         <th scope="col"> Repo - Name </th>
@@ -83,7 +83,7 @@ const Timeline = ({ repo , username }) => {
         {
           Repos.map(repo=>{
           return(
-            <tr>
+            <tr key={repo.name}>
             <td> { repo.name } </td>
             <td> { repo.description !== null ? repo.description : <p className='text-muted'> No description </p> } </td>
             <td> { new Date(repo.created_at).getFullYear() }</td>
