@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: Hello world action step
       id: hello
-      uses: skarthikeyan96/hello-node-actions@v1.3
+      uses: skarthikeyan96/hello-node-actions@v1.4
       with:
         who-to-greet: 'Mona the Octocat'
         repo-token: ${{ secrets.GITHUB_TOKEN }}
