@@ -16,7 +16,7 @@ jobs:
         env:
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           SENTRY_ORG: ArrowInc
-          SENTRY_PROJECT: githubtimeline
+          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
         with:
           tagName: ${{ github.ref }}
           environment: production
