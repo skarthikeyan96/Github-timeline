@@ -27,6 +27,11 @@ class App extends React.Component {
       })
       .catch(res => console.log("errro", res));
   };
+
+  handleClick = () => {
+    throw 'sentry testing'
+  }
+
   render() {
     return (
       <div className="Timeline-outer__block container-fluid">
@@ -36,6 +41,7 @@ class App extends React.Component {
           </a>
         </nav>
         <br/>
+        <button onClick={this.handleClick}>Break the world</button>
         <div className="jumbotron container-fluid">
         <form>
         <div className="form-row justify-content-center">
