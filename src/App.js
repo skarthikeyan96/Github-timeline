@@ -29,7 +29,7 @@ class App extends React.Component {
   };
 
   handleClick = () => {
-    throw 'sentry testing'
+    console.error('sentry testing')
   }
 
   render() {
